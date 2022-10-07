@@ -35,16 +35,16 @@
 				<br>
 
 <h2 id="abstract"><font color="000093">Abstract</font></h2>
-<p><font color="000079">  Denoising Diffusion Probabilistic Models (DDPMs) are emerging in text-to-speech (TTS) synthesis because of their strong capability of generating high-fidelity samples. However, their iterative refinement process in high-dimensional data space results in slow inference speed, which restricts their application in real-time systems. Previous works have explored speeding up by minimizing the number of inference steps but at the cost of sample quality. In this work, to improve the inference speed for DDPM-based TTS model while achieving high sample quality, we propose ResGrad, a lightweight diffusion model which learns to refine the output spectrogram of an existing TTS model (e.g., FastSpeech 2) by predicting the residual between the model output and the corresponding ground-truth speech. ResGrad has several advantages: 1) Compare with other acceleration methods for DDPM which need to synthesize speech from scratch, ResGrad reduces the complexity of task by changing the generation target from ground-truth mel-spectrogram to the residual, resulting into a more lightweight model and thus a smaller real-time factor. 2) ResGrad is employed in the inference process of the existing TTS model in a plug-and-play way, without re-training this model. We verify ResGrad on the single-speaker dataset LJSpeech and two more challenging datasets with multiple speakers (LibriTTS) and high sampling rate (VCTK). Experimental results show that in comparison with other speed-up methods of DDPMs: 1) ResGrad achieves better sample quality with the same inference speed measured by real-time factor; 2) with similar speech quality, ResGrad synthesizes speech faster than baseline methods by more than 10 times.</font></p>
+<p><font color="061E61">  Denoising Diffusion Probabilistic Models (DDPMs) are emerging in text-to-speech (TTS) synthesis because of their strong capability of generating high-fidelity samples. However, their iterative refinement process in high-dimensional data space results in slow inference speed, which restricts their application in real-time systems. Previous works have explored speeding up by minimizing the number of inference steps but at the cost of sample quality. In this work, to improve the inference speed for DDPM-based TTS model while achieving high sample quality, we propose ResGrad, a lightweight diffusion model which learns to refine the output spectrogram of an existing TTS model (e.g., FastSpeech 2) by predicting the residual between the model output and the corresponding ground-truth speech. ResGrad has several advantages: 1) Compare with other acceleration methods for DDPM which need to synthesize speech from scratch, ResGrad reduces the complexity of task by changing the generation target from ground-truth mel-spectrogram to the residual, resulting into a more lightweight model and thus a smaller real-time factor. 2) ResGrad is employed in the inference process of the existing TTS model in a plug-and-play way, without re-training this model. We verify ResGrad on the single-speaker dataset LJSpeech and two more challenging datasets with multiple speakers (LibriTTS) and high sampling rate (VCTK). Experimental results show that in comparison with other speed-up methods of DDPMs: 1) ResGrad achieves better sample quality with the same inference speed measured by real-time factor; 2) with similar speech quality, ResGrad synthesizes speech faster than baseline methods by more than 10 times.</font></p>
 
 <br></br>
 
 
 <h2 id="audio-samples"><font color="000093">Audio Samples</font></h2>
-<p><font color="000079"> The below audio samples show the comparison between Recordings, GT mel + Vocoder, FastSpeech 2, DiffGAN-TTS, DiffSpeech, ProDiff, GradTTS-50, ResGrad-4, and ResGrad-50. Five samples are randomly selected from the test dataset of LJSpeech, LibriTTS, and VCTK. Each generated sample is normalized before comparison, and the raw recording is shown in Recordings. For each dataset, the same HiFi-GAN vocoder is used for all methods. </font></p>
+<p><font color="061E61"> The below audio samples show the comparison between Recordings, GT mel + Vocoder, FastSpeech 2, DiffGAN-TTS, DiffSpeech, ProDiff, GradTTS-50, ResGrad-4, and ResGrad-50. Five samples are randomly selected from the test dataset of LJSpeech, LibriTTS, and VCTK. Each generated sample is normalized before comparison, and the raw recording is shown in Recordings. For each dataset, the same HiFi-GAN vocoder is used for all methods. </font></p>
 <br></br>
 <p><b><font color="000093">LJSpeech: A dataset contains the recordings from a female speaker at a sampling rate of 22.05kHz.</font></b></p>
-<p><em><font color="000079">Sample 1: produced the block books, which were the immediate predecessors of the true printed book,</font></em></p>
+<p><em><font color="061E61">Sample 1: produced the block books, which were the immediate predecessors of the true printed book,</font></em></p>
 <table align="center">
 <thead>
 <tr>
@@ -96,7 +96,7 @@
 </tbody>
 </table>
 
-<p><em><font color="000079">Sample 2: especially as no more time is occupied, or cost incurred, in casting, setting, or printing beautiful letters </font></em></p>
+<p><em><font color="061E61">Sample 2: especially as no more time is occupied, or cost incurred, in casting, setting, or printing beautiful letters </font></em></p>
 <table align="center">
 <thead>
 <tr>
@@ -148,7 +148,7 @@
 </tbody>
 </table>
 
-<p><em><font color="000079">Sample 3: the forms of printed letters should be beautiful, and that their arrangement on the page should be reasonable and a help to the shapeliness of the letters themselves.</font></em></p>
+<p><em><font color="061E61">Sample 3: the forms of printed letters should be beautiful, and that their arrangement on the page should be reasonable and a help to the shapeliness of the letters themselves.</font></em></p>
 <table align="center">
 <thead>
 <tr>
@@ -201,7 +201,7 @@
 </tbody>
 </table>
 
-<p><em><font color="000079">Sample 4: The Chronicles of Newgate, Volume two. By Arthur Griffiths. Section four: Newgate down to eighteen eighteen.</font></em></p>
+<p><em><font color="061E61">Sample 4: The Chronicles of Newgate, Volume two. By Arthur Griffiths. Section four: Newgate down to eighteen eighteen.</font></em></p>
 <table align="center">
 <thead>
 <tr>
@@ -253,7 +253,7 @@
 </tbody>
 </table>
 
-<p><em><font color="000079">Sample 5: The inadequacy of the jail was noticed and reported upon again and again by the grand juries of the city of London,</font></em></p>
+<p><em><font color="061E61">Sample 5: The inadequacy of the jail was noticed and reported upon again and again by the grand juries of the city of London,</font></em></p>
 <table align="center">
 <thead>
 <tr>
@@ -308,7 +308,7 @@
 
 <br></br>
 <p><b><font color="000093">LibriTTS: A dataset contains the recordings from 1046 speakers at a sampling rate of 24kHz.</font></b></p>
-<p><em><font color="000079">Sample 1: Often it was almost pitch dark; then would come a greyish twilight where it opened out to the width of a decent lane.</font></em></p>
+<p><em><font color="061E61">Sample 1: Often it was almost pitch dark; then would come a greyish twilight where it opened out to the width of a decent lane.</font></em></p>
 <table align="center">
 <thead>
 <tr>
@@ -347,7 +347,7 @@
 </tbody>
 </table>
 
-<p><em><font color="000079">Sample 2: As to resorting to any legal adviser, even if she had known how to do so, it was scarcely to be thought of, for the same reason.</font></em></p>
+<p><em><font color="061E61">Sample 2: As to resorting to any legal adviser, even if she had known how to do so, it was scarcely to be thought of, for the same reason.</font></em></p>
 <table align="center">
 <thead>
 <tr>
@@ -386,7 +386,7 @@
 </tbody>
 </table>
 
-<p><em><font color="000079">Sample 3: An old greyhound will trust the more fatiguing part of the chace to the younger, and will place himself so as to meet the hare in her doubles; nor are the conjectures, which he forms on this occasion, founded in any thing but his observation and experience.</font></em></p>
+<p><em><font color="061E61">Sample 3: An old greyhound will trust the more fatiguing part of the chace to the younger, and will place himself so as to meet the hare in her doubles; nor are the conjectures, which he forms on this occasion, founded in any thing but his observation and experience.</font></em></p>
 <table align="center">
 <thead>
 <tr>
@@ -425,7 +425,7 @@
 </tbody>
 </table>
 
-<p><em><font color="000079">Sample 4: It was no good asking any of the crowd we met. They didn't look as if they understood any civilized tongue.</font></em></p>
+<p><em><font color="061E61">Sample 4: It was no good asking any of the crowd we met. They didn't look as if they understood any civilized tongue.</font></em></p>
 <table align="center">
 <thead>
 <tr>
@@ -464,7 +464,7 @@
 </tbody>
 </table>
 
-<p><em><font color="000079">Sample 5: The one without the other creates a lack of mental balance which is the most favorable condition for a pathological disturbance.</font></em></p>
+<p><em><font color="061E61">Sample 5: The one without the other creates a lack of mental balance which is the most favorable condition for a pathological disturbance.</font></em></p>
 <table align="center">
 <thead>
 <tr>
@@ -505,7 +505,7 @@
 
 <br></br>
 <p><b><font color="000093">VCTK: A dataset contains the recordings from 108 speakers at a sampling rate of 48kHz.</font></b></p>
-<p><em><font color="000079">Sample 1: Six spoons of fresh snow peas, five thick slabs of blue cheese, and maybe a snack for her brother Bob.</font></em></p>
+<p><em><font color="061E61">Sample 1: Six spoons of fresh snow peas, five thick slabs of blue cheese, and maybe a snack for her brother Bob.</font></em></p>
 <table align="center">
 <thead>
 <tr>
@@ -544,7 +544,7 @@
 </tbody>
 </table>
 
-<p><em><font color="000079">Sample 2: We also need a small plastic snake and a big toy frog for the kids.</font></em></p>
+<p><em><font color="061E61">Sample 2: We also need a small plastic snake and a big toy frog for the kids.</font></em></p>
 <table align="center">
 <thead>
 <tr>
@@ -583,7 +583,7 @@
 </tbody>
 </table>
 
-<p><em><font color="000079">Sample 3: We also need a small plastic snake and a big toy frog for the kids.</font></em></p>
+<p><em><font color="061E61">Sample 3: We also need a small plastic snake and a big toy frog for the kids.</font></em></p>
 <table align="center">
 <thead>
 <tr>
@@ -622,7 +622,7 @@
 </tbody>
 </table>
 
-<p><em><font color="000079">Sample 4: She can scoop these things into three red bags, and we will go meet her Wednesday at the train station.</font></em></p>
+<p><em><font color="061E61">Sample 4: She can scoop these things into three red bags, and we will go meet her Wednesday at the train station.</font></em></p>
 <table align="center">
 <thead>
 <tr>
@@ -661,7 +661,7 @@
 </tbody>
 </table>
 
-<p><em><font color="000079">Sample 5: We also need a small plastic snake and a big toy frog for the kids.</font></em></p>
+<p><em><font color="061E61">Sample 5: We also need a small plastic snake and a big toy frog for the kids.</font></em></p>
 <table align="center">
 <thead>
 <tr>
@@ -703,8 +703,8 @@
 
 <br></br>
 <h2 id="residualcalculation"><font color="000093">Residual Calculation</font></h2>
-<p><font color="000079"> The below samples show the comparison between the two residual calculation methods in ResGrad. Three samples are selected from the test dataset of LJSpeech to show the disadvantage of using predicted pitch (<b>ResGrad - pitch<sub>GT</sub></b>) instead of ground-truth pitch (<b>ResGrad</b>). In inference stage, 50 steps are used for generation.</font>
-<p><em><font color="000079">Sample 1: And it is worth mention in passing that, as an <b>example</b> of fine typography,</font></em></p>
+<p><font color="061E61"> The below samples show the comparison between the two residual calculation methods in ResGrad. Three samples are selected from the test dataset of LJSpeech to show the disadvantage of using predicted pitch (<b>ResGrad - pitch<sub>GT</sub></b>) instead of ground-truth pitch (<b>ResGrad</b>). In inference stage, 50 steps are used for generation.</font>
+<p><em><font color="061E61">Sample 1: And it is worth mention in passing that, as an <b>example</b> of fine typography,</font></em></p>
 <table align="center">
 <thead>
 <tr>
@@ -719,11 +719,11 @@
 </tr>
 </tbody>
 </table>
-<p><em><font color="000079">The generated residual from ResGrad - pitch<sub>GT</sub> : </font></em></p>
+<p><em><font color="061E61">The generated residual from ResGrad - pitch<sub>GT</sub> : </font></em></p>
 <p align="center"><img src="GeneratedSamples/ResidualComparison/predpitch1.png" width="50%"  class="center"/></p>
 
 
-<p><em><font color="000079">Sample 2: Printing, then, for <b>our</b> purpose, may be considered as the art of making books by means of movable types.</font></em></p>
+<p><em><font color="061E61">Sample 2: Printing, then, for <b>our</b> purpose, may be considered as the art of making books by means of movable types.</font></em></p>
 <table align="center">
 <thead>
 <tr>
@@ -738,10 +738,10 @@
 </tr>
 </tbody>
 </table>
-<p><em><font color="000079">The generated residual from ResGrad - pitch<sub>GT</sub> : </font></em></p>
+<p><em><font color="061E61">The generated residual from ResGrad - pitch<sub>GT</sub> : </font></em></p>
 <p align="center"><img src="GeneratedSamples/ResidualComparison/predpitch2.png" width="50%" class="center"/></p>
 
-<p><em><font color="000079">Sample 3: The Middle Ages <b>brought</b> calligraphy to perfection, and it was natural therefore </font></em></p>
+<p><em><font color="061E61">Sample 3: The Middle Ages <b>brought</b> calligraphy to perfection, and it was natural therefore </font></em></p>
 <table align="center">
 <thead>
 <tr>
@@ -756,7 +756,7 @@
 </tr>
 </tbody>
 </table>
-<p><em><font color="000079">The generated residual from ResGrad - pitch<sub>GT</sub> : </font></em></p>
+<p><em><font color="061E61">The generated residual from ResGrad - pitch<sub>GT</sub> : </font></em></p>
 <p align="center"><img src="GeneratedSamples/ResidualComparison/predpitch3.png" width="50%" class="center"/></p>
 
 
