@@ -53,7 +53,7 @@ mel-spectrogram to get the refined mel-spectrogram.
 <li><font color="061E61"> Each generated sample has been normalized, and the raw recording is shown in Recordings. </font></li>
 <li><font color="061E61"> Our method ResGrad uses FastSpeech 2 as the initial predictor for estimating mel-spectrogram. </font></li>
 <li><font color="061E61"> In order to improve the inference speed at each sampling step, ResGrad uses the same U-Net architecture in GradTTS but with twice fewer channels to reduce the model size (2.0M in ResGrad vs 7.6M in GradTTS). </font></li>
-<li><font color="061E61"> Measured by RTF, the inference speed of ResGrad-4 is similar to GradTTS-4, while the inference speed of ResGrad-50 is faster than GradTTS-50 and DiffSpeech-71. DiffGAN-TTS is faster than ResGrad-4. ProDiff is faster than ResGrad-50 but slower than ResGrad-4. </font></li>
+<li><font color="061E61"> Measured by RTF, the inference speed of ResGrad-4 is similar to GradTTS-4, while the inference speed of ResGrad-50 is faster than GradTTS-50 and DiffSpeech-71. DiffGAN-TTS is faster than ResGrad-4 but both of them has a RTF smaller than 0.02 on LJSpeech. ProDiff is faster than ResGrad-50 but slower than ResGrad-4. </font></li>
 </ul>
 
 
