@@ -36,12 +36,18 @@
 
 <h2 id="abstract"><font color="000093">Abstract</font></h2>
 <p><font color="061E61">  Denoising Diffusion Probabilistic Models (DDPMs) are emerging in text-to-speech (TTS) synthesis because of their strong capability of generating high-fidelity samples. However, their iterative refinement process in high-dimensional data space results in slow inference speed, which restricts their application in real-time systems. Previous works have explored speeding up by minimizing the number of inference steps but at the cost of sample quality. In this work, to improve the inference speed for DDPM-based TTS model while achieving high sample quality, we propose ResGrad, a lightweight diffusion model which learns to refine the output spectrogram of an existing TTS model (e.g., FastSpeech 2) by predicting the residual between the model output and the corresponding ground-truth speech. ResGrad has several advantages: 1) Compare with other acceleration methods for DDPM which need to synthesize speech from scratch, ResGrad reduces the complexity of task by changing the generation target from ground-truth mel-spectrogram to the residual, resulting into a more lightweight model and thus a smaller real-time factor. 2) ResGrad is employed in the inference process of the existing TTS model in a plug-and-play way, without re-training this model. We verify ResGrad on the single-speaker dataset LJSpeech and two more challenging datasets with multiple speakers (LibriTTS) and high sampling rate (VCTK). Experimental results show that in comparison with other speed-up methods of DDPMs: 1) ResGrad achieves better sample quality with the same inference speed measured by real-time factor; 2) with similar speech quality, ResGrad synthesizes speech faster than baseline methods by more than 10 times.</font></p>
-
 <br></br>
-
-
+<figure>
+<p align="center"><img src="GeneratedSamples/DiffSkinpipeline.png" width="80%"  class="center"/></p>
+<figcaption>
+<b>Figure 1:</b> Illustration of ResGrad. ResGrad first predicts the residual between the mel-spectrogram estimated
+by an existing TTS model and the ground-truth mel-spectrogram, and then adds the residual to the estimated
+mel-spectrogram to get the refined mel-spectrogram.
+</figcaption>
+</figure>
+<br></br>
 <h2 id="audio-samples"><font color="000093">Audio Samples</font></h2>
-<p><font color="061E61"> The below audio samples show the comparison between Recordings, ground-truth (GT) mel + Vocoder, FastSpeech 2, DiffGAN-TTS, DiffSpeech, ProDiff, GradTTS, ResGrad-4, and ResGrad-50. Three samples are randomly selected from the test dataset of LJSpeech, LibriTTS, and VCTK. Important details are listed as follows: </font></p>
+<p><font color="061E61"> Our method is shown in Figure 1. The below audio samples show the comparison between Recordings, ground-truth (GT) mel + Vocoder, FastSpeech 2, DiffGAN-TTS, DiffSpeech, ProDiff, GradTTS, ResGrad-4 (Our method), and ResGrad-50 (Our method). Three samples are randomly selected from the test dataset of LJSpeech, LibriTTS, and VCTK. Important details are listed as follows: </font></p>
 <ul style="list-style-type:square">
 <li><font color="061E61"> For each dataset, the same HiFi-GAN vocoder pretrained on GT mel is used for all methods. </font></li>
 <li><font color="061E61"> Each generated sample has been normalized, and the raw recording is shown in Recordings. </font></li>
@@ -957,7 +963,7 @@
 
 
 <h2 id="residualcalculation"><font color="000093">Residual Prediction</font></h2>
-<p><font color="061E61"> The below samples show the comparison between the two residual prediction methods: ResGrad and ResUNet. Three samples are randomly selected from the test dataset of LibriTTS. </font>
+<p><font color="061E61"> The below samples show the comparison between the two residual prediction methods: <b>ResGrad</b> and <b>ResUNet</b>. Three samples are randomly selected from the test dataset of LibriTTS. </font>
 <p><em><font color="061E61">Sample 1: Disturbed by these different reflections; inclining now to one course and then to another, and again recoiling from all, as each successive consideration presented itself to her mind; Rose passed a sleepless and anxious night." </font></em></p>
 <table align="center">
 <thead>
