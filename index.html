@@ -51,7 +51,7 @@ mel-spectrogram to get the refined mel-spectrogram.
 <ul style="list-style-type:square">
 <li><font color="061E61"> For each dataset, the same HiFi-GAN vocoder pretrained on GT mel is used for all methods. </font></li>
 <li><font color="061E61"> Each generated sample has been normalized, and the raw recording is shown in Recordings. </font></li>
-<li><font color="061E61"> FastSpeech 2 is used as the existing TTS model for our method, ResGrad. </font></li>
+<li><font color="061E61"> Our method ResGrad uses FastSpeech 2 as the initial predictor for estimating mel-spectrogram. </font></li>
 <li><font color="061E61"> In order to improve the inference speed at each sampling step, ResGrad uses the same U-Net architecture in GradTTS but with twice fewer channels to reduce the model size (2.0M in ResGrad vs 7.6M in GradTTS). </font></li>
 </ul>
 
