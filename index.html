@@ -59,10 +59,9 @@ mel-spectrogram to get the refined mel-spectrogram.
 <li><font color="061E61"> Our method ResGrad uses FastSpeech 2 as the initial predictor for estimating mel-spectrogram. </font></li>
 -->
 <li><font color="061E61"> The number of inference steps used by diffusion models is shown behind the name of models. For example, ResGrad-4 stands for ResGrad with 4 inference steps. But FastSpeech 2 is a model name instead of denoting the number of inference steps. </font></li>
-<li><font color="061E61"> For each dataset, the inference speed measured by real-time factor is shown in the brackets of the first case. </font></li>
+<li><font color="061E61"> For each dataset, the inference speed measured by the real-time factor is shown in the brackets of the first case. </font></li>
 <li><font color="061E61"> In order to improve the inference speed at each sampling step, ResGrad uses the same U-Net architecture in GradTTS but with twice fewer channels to reduce the model size (2.0M in ResGrad vs 7.6M in GradTTS). </font></li>
 </ul>
-
 
 <br></br>
 <p><b><font color="000093">LJSpeech: A dataset contains the recordings from a female speaker at a sampling rate of 22.05kHz.</font></b></p>
